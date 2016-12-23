@@ -241,7 +241,7 @@ describe('Messages operations', function() {
 
   describe('Retriving a message in a conversation', function() {
     nock('https://api.layer.com')
-      .get(`/apps/${fixtures.appId}/conversations/${fixtures.conversations.uuid}/messages/${fixtures.messages.uuid}`)
+      .get('/apps/' + fixtures.appId + '/conversations/' + fixtures.conversations.uuid + '/messages/' + fixtures.messages.uuid)
       .reply(200, fixtures.messages.success);
 
     it('should return array of messages', function(done) {
