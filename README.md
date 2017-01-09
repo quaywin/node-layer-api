@@ -341,6 +341,19 @@ Shorthand method for sending a plain text Message by providing `name` and `text`
  - `text` - Text or base64 encoded data for your message
  - `callback(err, res)` - *Optional* Callback function returns an error and response objects
 
+---------------------------------------
+
+### messages.get(mid, cid, [callback])
+
+[Retrieve](https://docs.layer.com/reference/server_api/messages.out#get-a-message) a single message in a conversation by providing message ID and conversation ID. Response `body` will be a [message resource](https://docs.layer.com/reference/server_api/message.obj).
+
+#### Arguments
+ - `mid` — message ID
+ - `cid` — conversation ID
+ - `callback(err, res)` — Callback function returns an error and response objects
+
+---------------------------------------
+
 ### messages.getAll(cid, [params], callback)
 
 [Retrieve](https://developer.layer.com/docs/platform#retrieving-messages) all messages in a conversation by providing `cid`. Response `body` will result in array of messages.
